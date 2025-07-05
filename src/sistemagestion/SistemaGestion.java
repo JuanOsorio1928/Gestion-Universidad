@@ -14,7 +14,21 @@ public class SistemaGestion {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Universidad universidad = new Universidad("Universidad Nacional");
+        
+        //Se crean los departamentos
+        universidad.agregarDepartamento("Ingenieria");
+        universidad.agregarDepartamento("Ciencias");
+        universidad.agregarDepartamento("Fumanas");
+        
+        //Se muestran los departamentos
+        System.out.println("Departamentos de la universidad: ");
+        universidad.mostrarDepartamentos();
+        
+        universidad = null; //simulando que fue borrada 
+        System.gc();  //Limpia memoria(departamentos borrados)
+        System.out.println("La universidad fue eliminada con exito.");
+        
     }
     
 }

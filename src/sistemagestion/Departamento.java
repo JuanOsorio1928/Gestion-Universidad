@@ -39,5 +39,7 @@ public class Departamento {
         this.cursos = cursos;
     }
     
-    
+    public void contratarProfesor(Profesor profesor){}
+    public void despedirProfesor(String nombre){}
+    public void ofrecerCurso(Curso curso){}
 }

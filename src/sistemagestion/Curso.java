@@ -18,4 +18,8 @@ public class Curso {
     public void generarReporte(generadorReporte generador) {
         //dependencia: Curso depende de GeneradorReporte
     }
+    
+    public void inscribirEstudiante(Estudiante estudiantes){}
+    public void desInscribirEstudiante(Estudiante estudiantes){}
+    public void asignarProfesor(Profesor profesor){}
 }
