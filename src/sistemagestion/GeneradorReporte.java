@@ -10,7 +10,8 @@ package sistemagestion;
  */
 public class GeneradorReporte {
     public void generar(String curso, int cantidadEstudiantes){
-        System.out.println("Reporte creado para el curso: " + curso);
+        System.out.println("Reporte de el curso: " + curso);
         System.out.println("Total de estudiantes: " + cantidadEstudiantes);
+        System.out.println("-------------------------------------");
     }
 }

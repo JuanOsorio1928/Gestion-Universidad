@@ -22,11 +22,16 @@ public class SistemaGestion {
         
         Profesor profe1 = new Profesor("Nestor Bolivar", "Programacion");
         Profesor profe2 = new Profesor("Pepito Perez", "Calculo");
+        
+        ing.contratarProfesor(profe1);
+        ing.contratarProfesor(profe2);
         universidad.agregarDepartamento("Fumanas");
         
-        //Se muestran los departamentos
-        System.out.println("Departamentos de la universidad: ");
-        universidad.mostrarDepartamentos();
+        //Se muestran los profes
+        System.out.println("Profesores de ingenieria: ");
+            for(Profesor p : ing.getProfesores()){
+                System.out.println("- " + p);
+            }
         
         ing.despedirProfesor("Pepito Perez");
         
@@ -34,11 +39,27 @@ public class SistemaGestion {
             for(Profesor p : ing.getProfesores()){
                 System.out.println("- " + p);
             }
+            
+        Curso poo = new Curso("A1000", "Programacion Orientada A Objetos");
+            poo.asignarProfesor(profe1);
+            
+            Estudiante est1 = new Estudiante("20251000", "Juan Osorio");
+            Estudiante est2 = new Estudiante("20251001", "Pepe Pepe");
+            
+            poo.inscribirEstudiante(est1);
+            poo.inscribirEstudiante(est2);
+        System.out.println("Estudiantes en el curso: " + poo.getNombre() + " :");
+        for(Estudiante e : poo.getEstudiantes()){
+            System.out.println("- " + e);
+        }
         
-        universidad = null; //simulando que fue borrada 
+        System.out.println("Cursos del estudiante: " + est1.getNombre() + ":");
+        for(Curso c : est1.getCursosInscritos()) {
+            System.out.println("- " + c);
+        }
+       /* universidad = null; //simulando que fue borrada 
         System.gc();  //Limpia memoria(departamentos borrados)
-        System.out.println("La universidad fue eliminada con exito.");
-        
+        System.out.println("La universidad fue eliminada con exito.");*/
     }
     
 }
