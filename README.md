@@ -11,6 +11,6 @@ Proyecto del sistema de gestion de universidades en java
   
 - Curso genera reportes usando "GeneradorReporte", sin mantenerlo como atributo.
 
-#Salida del Proyecto (en consola con los datos esperados
+#Salida del Proyecto (en consola) con los datos esperados:
 
 ![image](https://github.com/user-attachments/assets/ee9558e8-d426-468b-b967-6f4a9fb3e47e)
