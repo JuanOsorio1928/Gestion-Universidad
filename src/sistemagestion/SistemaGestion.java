@@ -18,12 +18,22 @@ public class SistemaGestion {
         
         //Se crean los departamentos
         universidad.agregarDepartamento("Ingenieria");
-        universidad.agregarDepartamento("Ciencias");
+        Departamento ing = universidad.getDepartamentos().get(0);
+        
+        Profesor profe1 = new Profesor("Nestor Bolivar", "Programacion");
+        Profesor profe2 = new Profesor("Pepito Perez", "Calculo");
         universidad.agregarDepartamento("Fumanas");
         
         //Se muestran los departamentos
         System.out.println("Departamentos de la universidad: ");
         universidad.mostrarDepartamentos();
+        
+        ing.despedirProfesor("Pepito Perez");
+        
+        System.out.println("Despues de despedir a pepito: ");
+            for(Profesor p : ing.getProfesores()){
+                System.out.println("- " + p);
+            }
         
         universidad = null; //simulando que fue borrada 
         System.gc();  //Limpia memoria(departamentos borrados)

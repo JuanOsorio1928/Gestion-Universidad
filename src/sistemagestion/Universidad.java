@@ -32,6 +32,10 @@ public class Universidad {
         }
     }
     
+    public List<Departamento> getDepartamentos(){
+        return departamentos;
+    }
+    
     public List<Profesor> obtenerTodosProfesores(){
         List<Profesor> todos = new ArrayList<>();
         for (Departamento d: departamentos){

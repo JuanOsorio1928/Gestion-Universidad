@@ -19,7 +19,7 @@ public class Curso {
         generador.generar(nombre, estudiantes.size());
         //dependencia: Curso depende de GeneradorReporte
     }
-    
+    public String getCodigo() { return codigo; }
     public void inscribirEstudiante(Estudiante estudiantes){}
     public void desInscribirEstudiante(Estudiante estudiantes){}
     public void asignarProfesor(Profesor profesor){}

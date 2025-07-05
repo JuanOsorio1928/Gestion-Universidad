@@ -24,7 +24,7 @@ public class Departamento {
         return nombre;
     }
 
-    public List getProfesores() {
+    public List<Profesor> getProfesores() {
         return profesores;
     }
 
@@ -44,7 +44,19 @@ public class Departamento {
         this.cursos = cursos;
     }
     
-    public void contratarProfesor(Profesor profesor){}
-    public void despedirProfesor(String nombre){}
-    public void ofrecerCurso(Curso curso){}
+    public void contratarProfesor(Profesor profesor){
+        if(!profesores.contains(profesor)) {
+            profesores.add(profesor);
+        }
+    }
+    public void despedirProfesor(String nombreProfesor){
+        profesores.removeIf(p -> p.getNombre().equalsIgnoreCase(nombreProfesor));
+    }
+    public void ofrecerCurso(Curso curso){
+        cursos.add(curso);
+    }
+    
+    public void eliminarCurso(String codigoCurso){
+        cursos.removeIf(c -> c.getCodigo().equalsIgnoreCase(codigoCurso));
+    }
 }
