@@ -5,12 +5,19 @@
 package sistemagestion;
 
 import java.util.List;
+import java.util.ArrayList;
 /**
  *
  * @author Juan Osorio
  */
 public class Universidad {
-    List<Departamento> departamentos;
+    private String nombre;
+    private List<Departamento> departamentos;
+    
+    public Universidad(String nombre){
+        this.nombre = nombre;
+        this.departamentos = new ArrayList<>();
+    }
     
     public void agregarDepartamento(String nombre){
         departamentos.add(new Departamento(nombre));
@@ -19,11 +26,17 @@ public class Universidad {
         departamentos.removeIf(dep -> dep.getNombre().equals(nombre));
     }
     
-    public void mostrarDepartamentos(String nombre){
+    public void mostrarDepartamentos(){
         for (Departamento dep : departamentos){
-            System.out.println("- " + dep.getNombre);
+            System.out.println("- " + dep.getNombre());
         }
     }
     
-    public List<Profesor> obtenerTodosProfesores(){}
+    public List<Profesor> obtenerTodosProfesores(){
+        List<Profesor> todos = new ArrayList<>();
+        for (Departamento d: departamentos){
+            todos.addAll(d.getProfesores());
+        }
+        return todos;
+    }
 }

@@ -15,6 +15,11 @@ public class Departamento {
     private List<Profesor> profesores; //agregacion
     private List<Curso> cursos; 
 
+    public Departamento (String nombre){
+        this.nombre = nombre;
+        this.profesores = new ArrayList<>();
+        this.cursos = new ArrayList<>();
+    }
     public String getNombre() {
         return nombre;
     }

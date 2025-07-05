@@ -15,7 +15,8 @@ public class Curso {
     private Profesor profesor;  //Asociacion
     private List<Estudiante> estudiantes; //Asociacion
     
-    public void generarReporte(generadorReporte generador) {
+    public void generarReporte(GeneradorReporte generador) {
+        generador.generar(nombre, estudiantes.size());
         //dependencia: Curso depende de GeneradorReporte
     }
     
